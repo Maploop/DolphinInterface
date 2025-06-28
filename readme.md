@@ -12,7 +12,7 @@ This application also supports markdown in the chat interface for easier readabi
 ### Make sure you have NodeJS installed!
 Run the following command:
 ```shell
-git clone https://github.com/Maploop/DolphinInterface.git && cd ./DolphinInterface && npm install && npm run make && cd ./out/make/squirrel.windows/x64 && start "lh-dl3-1.0.0 Setup.exe"
+git clone https://github.com/Maploop/DolphinInterface.git && cd ./DolphinInterface && npm install && npx electron-forge import && npm run make && cd ./out/make/squirrel.windows/x64 && start "lh-dl3-1.0.0 Setup.exe"
 ```
 This will automatically clone, compile and start the application.
 
