@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolphin - Llama 3.0</title>
+    <link rel="stylesheet" href="renderer.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <!-- <div id="errored" class="classification">COMPLEXITY</div> -->
+                <div class="status">
+                    <div class="status-dot"></div>
+                    <!-- <span id="connection">SECURE CONNECTION ESTABLISHED</span> -->
+                    <!-- <button onclick="settings_clicked()" class="settings-btn" id="settings-btn">SETTINGS</button> -->
+                </div>
+            </div>
+            <div class="title">DOLPHIN TERMINAL</div>
+            <div class="info-bar">
+                <span>ENCRYPTION: AES-256 | CLEARANCE: COSMIC</span>
+                <span id="current-time"></span>
+            </div>
+        </div>
+        
+        <div class="chat-area" id="chat-area">
+            <div class="system-message">
+                ⚠️ SYSTEM: You are now speaking to DOLPHIN-LLAMA3:8B via [127.0.0.1:11434] Communications are LOGGED; ⚠️
+            </div>
+            
+            <!-- <div class="message">
+                <div class="message-header">
+                    <span>[OPERATOR-1] BLACKBIRD</span>
+                    <span>14:30:42</span>
+                </div>
+                <div class="message-content">
+                    NIGHTFALL protocol is active. Asset deployment confirmed in sector 7.
+                </div>
+                <div class="encryption-status">🔒 End-to-end encrypted | Hash: 4f3b2a8d9e1c7f6b</div>
+            </div> -->
+            
+            
+        </div>
+        <div class="typing-indicator" id="typing-indicator">
+                <span>Processing your request</span>
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+        </div>
+        
+        <div class="input-area">
+            <div class="input-container">
+                <textarea 
+                    class="message-input" 
+                    id="message-input" 
+                    placeholder="Prompt..." 
+                    rows="1"
+                ></textarea>
+                <button class="send-btn" id="send-btn">TRANSMIT</button>
+            </div>
+            <div class="encryption-bar">
+                <div>
+                    <span>NODE: LANGLEY-07 | SESSION: <span id="session-id"></span> | MODEL: DOLPHIN-LLAMA3 8B</span>
+                </div>
+                <btn onclick="save_chat_file()" class="settings-btn">SAVE CHAT 💾</btn>
+            </div>
+        </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <div class="modal-title">SYSTEM CONFIGURATION</div>
+                <button class="close-btn" id="close-modal">×</button>
+            </div>
+            
+            <div class="setting-group">
+                <label class="setting-label">INTERFACE COLOR SCHEME</label>
+                <div class="color-presets">
+                    <div class="color-preset active" data-color="#00ff41" data-name="MATRIX">
+                        <div style="width: 20px; height: 20px; background: #00ff41; margin: 0 auto 5px; border-radius: 2px;"></div>
+                        MATRIX
+                    </div>
+                    <div class="color-preset" data-color="#00ffff" data-name="CYAN">
+                        <div style="width: 20px; height: 20px; background: #00ffff; margin: 0 auto 5px; border-radius: 2px;"></div>
+                        CYAN
+                    </div>
+                    <div class="color-preset" data-color="#ff0080" data-name="NEON">
+                        <div style="width: 20px; height: 20px; background: #ff0080; margin: 0 auto 5px; border-radius: 2px;"></div>
+                        NEON
+                    </div>
+                    <div class="color-preset" data-color="#ffff00" data-name="AMBER">
+                        <div style="width: 20px; height: 20px; background: #ffff00; margin: 0 auto 5px; border-radius: 2px;"></div>
+                        AMBER
+                    </div>
+                    <div class="color-preset" data-color="#ff4500" data-name="ORANGE">
+                        <div style="width: 20px; height: 20px; background: #ff4500; margin: 0 auto 5px; border-radius: 2px;"></div>
+                        ORANGE
+                    </div>
+                    <div class="color-preset" data-color="#8a2be2" data-name="VIOLET">
+                        <div style="width: 20px; height: 20px; background: #8a2be2; margin: 0 auto 5px; border-radius: 2px;"></div>
+                        VIOLET
+                    </div>
+                </div>
+            </div>
+            
+            <div class="setting-group">
+                <label class="setting-label">CUSTOM COLOR</label>
+                <input type="color" class="custom-color-input" id="custom-color" value="#00ff41">
+            </div>
+            
+            <button class="apply-btn" id="apply-settings">APPLY CONFIGURATION</button>
+        </div>
+    </div>
+
+    <script src="./renderer.js"></script>
+</body>
+</html>
